@@ -1,27 +1,27 @@
-import sys, pygame
+# This module adds system function use
+import os
+
+# the pygame module is all one needs for making cool python games
+import pygame
+
+# This module adds time related functions
+import time
+
+# This variable initializes the horizontal window position
+X = 100
+
+# This variable initializes teh vertical window position
+Y = 100
+
+os.environ["SDL_VIDEO_WINDOW_POS"] = "%d,%d" % (X, Y)
 
 pygame.init()
-
-size = width, height = 320, 240
-speed = [2, 2]
-black = 0, 0, 0
-
-screen = pygame.display.set_mode(size)
-
-ball = pygame.image.load("intro_ball.gif")
-ballrect = ball.get_rect()
-
-while 1:
+scr = pygame.display.set_mode((600, 50))
+title = pygame.display.set_caption("Pygame Window")
+time.sleep(2)
+done = False
+while not done:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
-            sys.exit()
-
-    ballrect = ballrect.move(speed)
-    if ballrect.left < 0 or ballrect.right > width:
-        speed[0] = -speed[0]
-    if ballrect.top < 0 or ballrect.bottom > height:
-        speed[1] = -speed[1]
-
-    screen.fill(black)
-    screen.blit(ball, ballrect)
-    pygame.display.flip()
+            done = True
+pygame.display.flip()
