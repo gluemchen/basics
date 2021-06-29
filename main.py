@@ -16,12 +16,18 @@ Y = 100
 os.environ["SDL_VIDEO_WINDOW_POS"] = "%d,%d" % (X, Y)
 
 pygame.init()
-scr = pygame.display.set_mode((600, 50))
-title = pygame.display.set_caption("Pygame Window")
+scr = pygame.display.set_mode((800, 600), pygame.RESIZABLE)
+x, y = scr.get_size()
+title = pygame.display.set_caption("Pygame Window Resizeable")
 time.sleep(2)
-done = False
-while not done:
+running = True
+while running:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
-            done = True
+            running = False
+    scr.fill((255, 255, 255))
+        pygame.draw.circle(scr, (200, 0, 0), (250, 250), 80)
+
 pygame.display.flip()
+pygame.display.quit()
+print(x, y)
