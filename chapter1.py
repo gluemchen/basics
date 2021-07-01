@@ -1,6 +1,4 @@
 import pygame
-from pygame import *
-from pygame import mixer
 from pygame.locals import *
 
 pygame.init()
