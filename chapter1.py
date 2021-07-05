@@ -66,9 +66,5 @@ while RUNNING:
     screen.blit(ball, rect)
     pygame.display.update()
 
-<<<<<<< HEAD
-pygame.quit()
-=======
 # uninitialize all imported pygame modules
 pygame.quit()
->>>>>>> 5838473386d729607a4018b31efef2c791cc3c92
