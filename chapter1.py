@@ -5,6 +5,7 @@ from turtle import speed
 import pygame
 from pygame.locals import *
 
+pygame.
 # resoloution
 size = 1024, 768
 width, height = size
