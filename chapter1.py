@@ -1,16 +1,6 @@
 """
 Learning some pygame
 """
-<<<<<<< HEAD
-# Here i import all the modules that i need
-import pygame
-import pygame.image
-import pygame.display
-import pygame.event
-import pygame.draw
-
-from turtle import speed
-=======
 
 import pygame
 import pygame.event
@@ -18,7 +8,6 @@ import pygame.display
 import pygame.rect
 import pygame.image
 import pygame.draw
->>>>>>> 0693770479e2c8bf5f90956d110ccdf0a4f07f76
 from pygame.locals import *
 from turtle import speed
 
