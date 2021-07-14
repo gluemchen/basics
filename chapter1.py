@@ -7,7 +7,7 @@ import pygame.image
 import pygame.display
 import pygame.event
 import pygame.draw
-import pygame.event
+
 from turtle import speed
 from pygame.locals import *
 
