@@ -1,8 +1,14 @@
 """
 Learning some pygame
 """
-from turtle import speed
+# Here i import all the modules that i need
 import pygame
+import pygame.image
+import pygame.display
+import pygame.event
+import pygame.draw
+import pygame.event
+from turtle import speed
 from pygame.locals import *
 
 # resoloution
@@ -37,7 +43,11 @@ pygame.init()
 
 # initializing a resizable screen
 screen = pygame.display.set_mode((size), RESIZABLE)
+
+# By default Programm is always running
 RUNNING = True
+
+# Default fill color of screen range
 background = GRAY
 
 ball = pygame.image.load("intro_ball.gif")
@@ -49,8 +59,15 @@ while RUNNING:
         print(key_dict)
         print(event)
         rect = rect.move(speed)
+
         if event.type == QUIT:
             RUNNING = False
+        if event.type == MOUSEBUTTONDOWN:
+            print(event)
+        if event.type == MOUSEBUTTONDOWN:
+            print(event)
+        if event.type == MOUSEMOTION:
+            print(event)
         if event.type == KEYDOWN:
             if event.key in key_dict:
                 background = key_dict[event.key]
@@ -62,7 +79,16 @@ while RUNNING:
             speed[1] = -speed[1]
 
     screen.fill(background)
-    pygame.draw.rect(screen, RED, rect, 1)
+    pygame.draw.rect(screen, BLUE, (50, 20, 120, 100), 1, 3)
+    pygame.draw.ellipse(screen, BLUE, (100, 60, 120, 100), 1)
+    pygame.draw.rect(screen, BLUE, (150, 100, 120, 100), 1, -1, 3)
+    pygame.draw.ellipse(screen, BLUE, (200, 140, 120, 100), 2)
+    pygame.draw.rect(screen, BLUE, (250, 180, 120, 100), 1, -1, -1, 3)
+    pygame.draw.ellipse(screen, BLUE, (300, 220, 120, 100), 3)
+    pygame.draw.rect(screen, BLUE, (350, 260, 120, 100), 1, -1, -1, -1, 3)
+    pygame.draw.ellipse(screen, BLUE, (400, 300, 120, 100), 4)
+    pygame.draw.rect(screen, BLUE, (450, 340, 120, 100), 1, -1, -1, -1, -1, 3)
+    pygame.draw.ellipse(screen, RED, rect, 1)
     screen.blit(ball, rect)
     pygame.display.update()
 
