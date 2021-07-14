@@ -1,11 +1,16 @@
 """
 Learning some pygame
 """
-from turtle import speed
-import pygame
-from pygame.locals import *
 
-pygame.
+import pygame
+import pygame.event
+import pygame.display
+import pygame.rect
+import pygame.image
+import pygame.draw
+from pygame.locals import *
+from turtle import speed
+
 # resoloution
 size = 1024, 768
 width, height = size
@@ -63,6 +68,7 @@ while RUNNING:
             speed[1] = -speed[1]
 
     screen.fill(background)
+    pygame.draw.rect(screen, RED, (50, 20, 120, 100))
     pygame.draw.rect(screen, RED, rect, 1)
     screen.blit(ball, rect)
     pygame.display.update()
