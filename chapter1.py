@@ -79,7 +79,6 @@ while RUNNING:
             speed[1] = -speed[1]
 
     screen.fill(background)
-<<<<<<< HEAD
     pygame.draw.rect(screen, BLUE, (50, 20, 120, 100), 1, 3)
     pygame.draw.ellipse(screen, BLUE, (100, 60, 120, 100), 1)
     pygame.draw.rect(screen, BLUE, (150, 100, 120, 100), 1, -1, 3)
@@ -90,10 +89,6 @@ while RUNNING:
     pygame.draw.ellipse(screen, BLUE, (400, 300, 120, 100), 4)
     pygame.draw.rect(screen, BLUE, (450, 340, 120, 100), 1, -1, -1, -1, -1, 3)
     pygame.draw.ellipse(screen, RED, rect, 1)
-=======
-    pygame.draw.rect(screen, RED, (50, 20, 120, 100))
-    pygame.draw.rect(screen, RED, rect, 1)
->>>>>>> 0693770479e2c8bf5f90956d110ccdf0a4f07f76
     screen.blit(ball, rect)
     pygame.display.update()
 

@@ -26,7 +26,7 @@ while running:
         if event.type == pygame.QUIT:
             running = False
     scr.fill((255, 255, 255))
-        pygame.draw.circle(scr, (200, 0, 0), (250, 250), 80)
+    pygame.draw.circle(scr, (200, 0, 0), (250, 250), 80)
 
 pygame.display.flip()
 pygame.display.quit()
